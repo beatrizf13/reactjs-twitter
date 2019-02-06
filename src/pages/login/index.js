@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Logo from '../../assets/twitter.svg';
 import { Container } from './styles';
 
-export default class login extends Component {
+export default class Login extends Component {
   state = {
     username: '',
   };

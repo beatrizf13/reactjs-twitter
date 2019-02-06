@@ -24,7 +24,7 @@ export const Container = styled.div`
     resize: none;
   }
 
-  li {
+  ul {
     list-style: none;
     color: #1c2022;
   }
