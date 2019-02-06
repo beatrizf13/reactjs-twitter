@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import api from '../../services/api';
 
 import Logo from '../../assets/twitter.svg';
 import { Container } from './styles';
@@ -8,13 +9,15 @@ export default class login extends Component {
     newTweet: '',
   };
 
-  handleNewTweet = (e) => {
+  handleNewTweet = async (e) => {
     if (e.keyCode !== 13) return;
 
     const content = this.state.newTweet;
     const auhtor = localStorage.getItem('@Twitter: username');
 
-    console.log(content, auhtor);
+    await api.post('tweets', { content, auhtor });
+
+    this.setState({ newTweet: '' });
   };
 
   handleInputChange = (e) => {
