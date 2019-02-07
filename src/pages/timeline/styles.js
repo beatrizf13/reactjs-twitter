@@ -24,6 +24,18 @@ export const Container = styled.div`
     resize: none;
   }
 
+  li {
+    padding: 20px 20px 0;
+    margin: 20px 0 0;
+    border-top: 1px solid #eee;
+  }
+
+  li:first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border: 0;
+  }
+
   ul {
     list-style: none;
     color: #1c2022;

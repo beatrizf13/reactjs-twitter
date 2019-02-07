@@ -36,9 +36,9 @@ export default class Timeline extends Component {
     if (e.keyCode !== 13) return;
 
     const content = this.state.newTweet;
-    const auhtor = localStorage.getItem('@Twitter: username');
+    const author = localStorage.getItem('@Twitter: username');
 
-    await api.post('/tweets', { content, auhtor });
+    await api.post('/tweets', { content, author });
 
     this.setState({ newTweet: '' });
   };
@@ -62,7 +62,9 @@ export default class Timeline extends Component {
 
         <ul>
           {this.state.tweets.map(tweet => (
-            <Tweet key={tweet._id} tweet={tweet} />
+            <li>
+              <Tweet key={tweet._id} tweet={tweet} />
+            </li>
           ))}
         </ul>
       </Container>

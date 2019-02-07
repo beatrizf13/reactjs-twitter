@@ -16,14 +16,12 @@ export default class Tweet extends Component {
 
     return (
       <Container>
-        <li>
-          <strong>{tweet.author}</strong>
-          <p>{tweet.content}</p>
-          <button type="button" onClick={this.handleLike}>
-            <img src={like} alt="Like" />
-            {tweet.likes}
-          </button>
-        </li>
+        <strong>{tweet.author}</strong>
+        <p>{tweet.content}</p>
+        <button type="button" onClick={this.handleLike}>
+          <img src={like} alt="Like" />
+          {tweet.likes}
+        </button>
       </Container>
     );
   }
